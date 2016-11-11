@@ -38,9 +38,7 @@ public class Circle {
     public boolean pointIntoCircle(double x1, double y1) {
         System.out.printf("Координаты заданной точки:x = %.3f, y = %.3f\n", x1, y1);
         double distance = Math.sqrt(Math.pow((x1 - x), 2) + Math.pow((y1 - y), 2));
-        if (distance * (1 - E) > radius)
-            return false;
-        else return true;
+        return !distance * (1 - E) > radius;
     }
 
     public double circleLength() {
